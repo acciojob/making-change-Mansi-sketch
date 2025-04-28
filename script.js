@@ -24,7 +24,7 @@ const makeChange = (c) => {
 	amount %= obj.n;
 
 	change.p = Math.floor(amount/obj.p);
-	
+	amount %= obj.p;
 	return change;
 };
 
