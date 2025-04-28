@@ -1,10 +1,10 @@
 const makeChange = (c) => {
   // your name here
 	let obj = {
-		"q": 0.25,
-		"d": 0.10,
-		"n": 0.05,
-		"p": 0.01
+		"q": 25,
+		"d": 10,
+		"n": 05,
+		"p": 01
 	}
 	let change = {
 		"q": 0,
@@ -12,19 +12,19 @@ const makeChange = (c) => {
 		"n": 0,
 		"p": 0
 	};
-	let amount = c/100;
+
 	
-	change.q = Math.floor(amount/obj.q);
-	amount %= obj.q;
+	change.q = Math.floor(c/obj.q);
+	c %= obj.q;
 
-	change.d = Math.floor(amount/obj.d);
-	amount %= obj.d;
+	change.d = Math.floor(c/obj.d);
+	c %= obj.d;
 
-	change.n = Math.floor(amount/obj.n);
-	amount %= obj.n;
+	change.n = Math.floor(c/obj.n);
+	c %= obj.n;
 
-	change.p = Math.floor(amount/obj.p);
-	amount %= obj.p;
+	change.p = c;
+	
 	return change;
 };
 
